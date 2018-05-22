@@ -5,12 +5,13 @@ body {
 #louvre {
 width: 50%;
 height:50%;
+margin-left: 20px;
 }
 .listExplore{
 margin-top:75px;
 }
 
-.camera-specs ul {
-margin-top:200px;
-padding-top: 200px;
+ul .camera-specs  {
+margin-top:20px;
+float: right;
 }
