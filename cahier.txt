@@ -1,0 +1,5 @@
+*Share photos from historical monument or museum (by putting the location).
+*Give detail of the camera (brand, setting : aperture,shutter speed,etc).
+*Write a review about the place
+*Give star to the photos
+*Sign up - log in
