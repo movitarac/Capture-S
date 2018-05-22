@@ -1,17 +1,31 @@
-body {
-
+#welcome {
+background-color: #ffcce6;
 }
 
-#louvre {
-width: 50%;
-height:50%;
-margin-left: 20px;
+#explain{
+margin-top:100px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-weight: 400px;
 }
 .listExplore{
-margin-top:75px;
+margin-top:25px;
 }
 
-ul .camera-specs  {
-margin-top:20px;
-float: right;
+/******MUSEE****/
+
+#louvre, #mamvp {
+	display:block;
+	margin-left: auto;
+    margin: auto;
+	width:500px;
+	height: 400px;
+	}
+#museelouvre,#museeAMVP {
+	background-color: #ffcce6;
+	}
+
+.camDetail {
+margin-top:30px;
+
 }
+
