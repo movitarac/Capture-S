@@ -1,0 +1,31 @@
+.add {
+    margin-left: 20px;
+}
+
+.addName {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.addCity {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.butAdd,.butSubmit {
+    
+    margin-left: 58px;
+    margin-top: 10px;
+    background-color: #004d1a;
+    color:#ffffff;
+    border-radius: 8px;
+}
+
+
+#titlExplore {
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+#listmuseums {
+    margin-top: 25px;
+}

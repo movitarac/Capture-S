@@ -1,0 +1,19 @@
+<h3 id="titlExplore">Where to explore?</h3>
+<div class="add">
+  
+  <br>  Name
+  <input class="addName" [(ngModel)]="museum.name" />
+  <br> City
+  <input class="addCity" [(ngModel)]="museum.city" />
+  <br>
+  <button class="butAdd" (click)="addMuseum()" *ngIf="!edit">add Museum/Historical Monument</button>
+  <button class="butSubmit" (click)="editOver()" *ngIf="edit">Submit modification</button>
+  
+ 
+</div>
+
+<ul id="listmuseums" *ngFor="let m of museums">
+  <li>{{m.name|uppercase}},{{m.city}}
+    <button (click)="editMuseum(m.id)">Edit</button>
+  </li>
+</ul>

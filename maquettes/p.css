@@ -13,18 +13,18 @@ margin-top:25px;
 
 /******MUSEE****/
 
-#louvre, #mamvp {
+#louvre, #mamvp , #hisNat{
 	display:block;
 	margin-left: auto;
     margin: auto;
 	width:500px;
 	height: 400px;
 	}
-#museelouvre,#museeAMVP {
+#museelouvre,#museeAMVP,#museeHisNat {
 	background-color: #ffcce6;
 	}
 
-.camDetail {
+.camDetail, .star,.reviewP {
 margin-top:30px;
 
 }

@@ -1,0 +1,20 @@
+CHATEAU DE VINCENNES,Paris Edit
+CHATEAU DE VERSAILLES,Paris Edit
+FONDATION LOUIS VUITTON,Paris Edit
+MUSÉE CURIE,Paris Edit
+MUSÉE DE LA POSTE,Paris Edit
+MUSÉE DU LUXEMBOURG,Paris Edit
+MUSÉE PICASSO,Paris
+
+
+
+lamda permet de declarer rapidement une variable
+
+export class Array {
+	private liste: string[];
+
+	filter( f:function(param)) {
+	const resultat = [];
+
+}
+}
