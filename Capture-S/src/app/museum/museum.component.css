@@ -31,7 +31,19 @@
     font-size: 25px;
     margin-left: 20px;
 }
+.aList {
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#009900;
+}
+
+a:hover{
+    
+    color:#ff1a1a;
+    text-decoration: none;
+    }
 
 #listmuseums {
     margin-top: 25px;
 }
+

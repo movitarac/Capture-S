@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 
 import { MuseumComponent } from './museum/museum.component';
 import { MuseumDetailComponent } from './museum-detail/museum-detail.component';
+import { MuseumService } from './_services/museum.service';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { MuseumDetailComponent } from './museum-detail/museum-detail.component';
   imports: [
     BrowserModule, FormsModule
   ],
-  providers: [],
+  providers: [MuseumService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

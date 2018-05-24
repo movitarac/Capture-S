@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Museum } from '../_models';
+import { MuseumService } from '../_services/museum.service';
 
 @Component({
   selector: 'app-museum',
@@ -14,16 +15,18 @@ export class MuseumComponent implements OnInit {
   */
   /*museum = { 'name': '', 'city': '' };*/
   edit = false;
-  museums = [new Museum('Louvre Museum', 'Paris', 'Rue de Rivoli', 'art', '9am-6pm', 15),
-  new Museum('MAMVP', 'Paris', 'Avenue du Président Wilson', 'art', '10am-6pm', 7),
-  new Museum('Muséum National d\'Histoire Naturelle', 'Paris', 'Rue Voltaire', 'natural history', '9am-5pm', 10),
-  new Museum('Musée d\'Orsay', 'Paris', 'Rue de la Légion d\'Honneur', 'art', '9:30am-6pm', 12),
-  new Museum('Musée de l\'Orangerie', 'Paris', ' Jardin Tuileries', 'art', '9am-6pm', 9)];
   museum = new Museum();
+  museums;
   selectedMuseum: Museum;
-  constructor() { }
+  /*private va rajouter dans la classe a un attribut qui peut etre atteint de partout..
+  typescript va rajouter automatiquement comme un attribut en haut (museums, etc)*/
+  constructor(private museumService: MuseumService) {
 
+  }
+/* ngOnInit() is a lifecycle hooks(sequence)*/
   ngOnInit() {
+    this.museums = this.museumService.getMuseums();
+    /*this.museumService.getEvent().subscribe(a => console.log(a));*/
   }
   onSelect(m: Museum): void {
     this.selectedMuseum = m;

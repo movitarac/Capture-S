@@ -1,3 +1,5 @@
+
+
 <h3 id="titlExplore">Where to explore?</h3>
 <div class="add">
   
@@ -13,9 +15,10 @@
 </div>
 
 <ul id="listmuseums" *ngFor="let m of museums">
-  <li (click)="onSelect(m)">{{m.name|uppercase}},{{m.city}}
+  <li (click)="onSelect(m)"><a href="#"  class="aList" >{{m.name|uppercase}},{{m.city}}</a>
     <button class="butEdit" (click)="editMuseum(m.id)">Edit</button>
   </li>
 </ul>
-
+<div class="details" *ngIf="selectedMuseum">
 <app-museum-detail [museum]="selectedMuseum" ></app-museum-detail>
+</div>

@@ -1,0 +1,4 @@
+il faut mettre provider dans le module (ce n'est pas fait automatiquement)
+il faut mettre aussi dans le component
+
+observable: un objet qui va declencher un evenement (actions qu'on veut executer), il va appeler une methode
