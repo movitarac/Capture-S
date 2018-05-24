@@ -20,6 +20,12 @@
     border-radius: 8px;
 }
 
+.butEdit {
+    margin-left: 10px;
+    background-color: #004d1a;
+    color:#ffffff;
+    border-radius: 8px;
+}
 
 #titlExplore {
     font-size: 25px;

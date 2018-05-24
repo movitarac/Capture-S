@@ -13,7 +13,9 @@
 </div>
 
 <ul id="listmuseums" *ngFor="let m of museums">
-  <li>{{m.name|uppercase}},{{m.city}}
-    <button (click)="editMuseum(m.id)">Edit</button>
+  <li (click)="onSelect(m)">{{m.name|uppercase}},{{m.city}}
+    <button class="butEdit" (click)="editMuseum(m.id)">Edit</button>
   </li>
 </ul>
+
+<app-museum-detail [museum]="selectedMuseum" ></app-museum-detail>

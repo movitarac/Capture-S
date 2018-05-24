@@ -14,15 +14,20 @@ export class MuseumComponent implements OnInit {
   */
   /*museum = { 'name': '', 'city': '' };*/
   edit = false;
-  museums = [new Museum('Louvre Museum', 'Paris'), new Museum('MAMVP', 'Paris'),
-  new Museum('Muséum National d\'Histoire Naturelle', 'Paris'), new Museum('Musée d\'Orsay', 'Paris'),
-  new Museum('Musée de l\'Orangerie', 'Paris')];
+  museums = [new Museum('Louvre Museum', 'Paris', 'Rue de Rivoli', 'art', '9am-6pm', 15),
+  new Museum('MAMVP', 'Paris', 'Avenue du Président Wilson', 'art', '10am-6pm', 7),
+  new Museum('Muséum National d\'Histoire Naturelle', 'Paris', 'Rue Voltaire', 'natural history', '9am-5pm', 10),
+  new Museum('Musée d\'Orsay', 'Paris', 'Rue de la Légion d\'Honneur', 'art', '9:30am-6pm', 12),
+  new Museum('Musée de l\'Orangerie', 'Paris', ' Jardin Tuileries', 'art', '9am-6pm', 9)];
   museum = new Museum();
+  selectedMuseum: Museum;
   constructor() { }
 
   ngOnInit() {
   }
-
+  onSelect(m: Museum): void {
+    this.selectedMuseum = m;
+  }
   addMuseum() {
     this.museums.push(this.museum);
     this.museum = new Museum();
@@ -42,8 +47,7 @@ export class MuseumComponent implements OnInit {
     }
     return null;*/
     /*0 correspond au 1er element m => lamda*/
-    /* filter attend une fonction 
-    apres chevron c'est la condition, avant chevron c'est le param*/
+    /* filter attend une fonction apres chevron c'est la condition, avant chevron c'est le param*/
     return this.museums.filter(m => m.id === id)[0];
   }
 

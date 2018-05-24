@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { MuseumComponent } from './museum/museum.component';
+import { MuseumDetailComponent } from './museum-detail/museum-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { MuseumComponent } from './museum/museum.component';
     HelloComponent,
     HeaderComponent,
     FooterComponent,
-    MuseumComponent
+    MuseumComponent,
+    MuseumDetailComponent,
   ],
   imports: [
     BrowserModule, FormsModule
