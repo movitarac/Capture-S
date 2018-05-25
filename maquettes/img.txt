@@ -1,0 +1,22 @@
+<div class="details" *ngIf="museum">
+  
+ <h3 class="museumName">{{museum.name}}</h3>
+ <br>
+ <img class="photoM" [src]="'/assets/'+museum.photo">
+  <br>
+  Type: {{museum.type}}
+  <br>
+ Address: {{museum.address}}
+  <br>
+  City: {{museum.city}}
+  <br>
+ Open Hours: {{museum.openHours}}
+  <br>
+  Tarif: {{museum.tarif}} (euros)
+  <br>
+  Review:
+  <br>
+  + 
+  <br>
+  -   
+</div>

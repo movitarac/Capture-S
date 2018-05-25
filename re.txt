@@ -1,0 +1,8 @@
+﻿{{photo.positiveReview}}
+  <br>
+  - {{photo.negativeReview}}
+  <br>
+  Camera Brand: {{photo.cameraBrand}}
+  <br>
+  Score: {{photo.score}}
+   [routerLink]="['/photo', m.id]"

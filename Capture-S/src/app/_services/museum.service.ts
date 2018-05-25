@@ -5,11 +5,13 @@ import { Museum } from '../_models';
   providedIn: 'root'
 })
 export class MuseumService {
-  museums = [new Museum('Louvre Museum', 'Paris', 'Rue de Rivoli', 'art', '9am-6pm', 15),
-  new Museum('MAMVP', 'Paris', 'Avenue du Président Wilson', 'art', '10am-6pm', 7),
-  new Museum('Muséum National d\'Histoire Naturelle', 'Paris', 'Rue Voltaire', 'natural history', '9am-5pm', 10),
-  new Museum('Musée d\'Orsay', 'Paris', 'Rue de la Légion d\'Honneur', 'art', '9:30am-6pm', 12),
-  new Museum('Musée de l\'Orangerie', 'Paris', ' Jardin Tuileries', 'art', '9am-6pm', 9)];
+  edit = false;
+ museum;
+  museums = [new Museum('Musée du Louvre ', 'Paris', 'Rue de Rivoli', 'art', '9am-6pm', 15, 'louvre.jpg'),
+  new Museum('Musée d\'Art Moderne de la Ville de Paris', 'Paris', 'Avenue du Président Wilson', 'art', '10am-6pm', 7, 'mamvp.jpg'),
+  new Museum('Muséum National d\'Histoire Naturelle', 'Paris', 'Rue Voltaire', 'natural history', '9am-5pm', 10, 'histoireNat.jpg'),
+  new Museum('Musée d\'Orsay', 'Paris', 'Rue de la Légion d\'Honneur', 'art', '9:30am-6pm', 12, 'orsay.jpg'),
+  new Museum('Musée de l\'Orangerie', 'Paris', ' Jardin Tuileries', 'art', '9am-6pm', 9, 'orange.jpg')];
   /*emitter;*/
   constructor() {
     /*this.emitter = new EventEmitter<string>();
@@ -20,6 +22,23 @@ export class MuseumService {
     return this.museums;
   }
 
+  getMuseumById(id: number): Museum {
+    console.log(id);
+    /*for (let i = 0; i < this.museums.length; i++) {
+      if (this.museums[i].id === id) {
+        return this.museums[i];
+      }
+    }
+    return null;*/
+    /*0 correspond au 1er element m => lamda*/
+    /* filter attend une fonction apres chevron c'est la condition, avant chevron c'est le param*/
+    return this.museums.filter(m => m.id === id)[0];
+  }
+  editMuseum(id: number) {
+    /*console.log(id);*/
+    this.museum = this.getMuseumById(id);
+    this.edit = true;
+  }
   /*getEvent() {
     return this.emitter;
   }*/

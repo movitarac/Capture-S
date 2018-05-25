@@ -9,7 +9,12 @@ import { FooterComponent } from './footer/footer.component';
 import { MuseumComponent } from './museum/museum.component';
 import { MuseumDetailComponent } from './museum-detail/museum-detail.component';
 import { MuseumService } from './_services/museum.service';
+import { RouterModule, Routes } from '@angular/router';
+import { MuseumPhotoComponent } from './museum-photo/museum-photo.component';
 
+
+const appRoutes: Routes = [{ path: '', component: MuseumComponent }, { path: 'hello', component: HelloComponent },
+{ path: 'photo/:id', component: MuseumPhotoComponent }];
 
 @NgModule({
   declarations: [
@@ -19,8 +24,9 @@ import { MuseumService } from './_services/museum.service';
     FooterComponent,
     MuseumComponent,
     MuseumDetailComponent,
+    MuseumPhotoComponent,
   ],
-  imports: [
+  imports: [RouterModule.forRoot(appRoutes),
     BrowserModule, FormsModule
   ],
   providers: [MuseumService],

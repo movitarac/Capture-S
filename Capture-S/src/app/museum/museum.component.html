@@ -1,6 +1,4 @@
-
-
-<h3 id="titlExplore">Where to explore?</h3>
+<h3 id="titlExplore">Which museum?</h3>
 <div class="add">
   
   <br>  Name
@@ -15,10 +13,11 @@
 </div>
 
 <ul id="listmuseums" *ngFor="let m of museums">
-  <li (click)="onSelect(m)"><a href="#"  class="aList" >{{m.name|uppercase}},{{m.city}}</a>
+  <li (click)="onSelect(m)">{{m.name|uppercase}},{{m.city}}
     <button class="butEdit" (click)="editMuseum(m.id)">Edit</button>
+    <a [routerLink]="['/photo', m.id]" class="aList" >See more</a>
   </li>
 </ul>
 <div class="details" *ngIf="selectedMuseum">
-<app-museum-detail [museum]="selectedMuseum" ></app-museum-detail>
+<app-museum-detail [museum]="selectedMuseum"></app-museum-detail>
 </div>

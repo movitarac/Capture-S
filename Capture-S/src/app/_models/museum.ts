@@ -7,8 +7,9 @@ export class Museum {
     public tarif: number;
     public address: string;
     public openHours: string;
-
-    constructor(name = '', city = '', address = '', type = '', openHours = '', tarif = 0) {
+    public photo: string;
+    public star: number;
+    constructor(name = '', city = '', address = '', type = '', openHours = '', tarif = 0, photo?, star?) {
         this.id = Museum.count++;
         this.name = name;
         this.city = city;
@@ -16,5 +17,7 @@ export class Museum {
         this.openHours = openHours;
         this.address = address;
         this.tarif = tarif;
+        this.photo = photo;
+        this.star = star;
     }
 }
