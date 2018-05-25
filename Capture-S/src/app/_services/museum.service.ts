@@ -6,12 +6,13 @@ import { Museum } from '../_models';
 })
 export class MuseumService {
   edit = false;
- museum;
+  museum;
   museums = [new Museum('Musée du Louvre ', 'Paris', 'Rue de Rivoli', 'art', '9am-6pm', 15, 'louvre.jpg'),
   new Museum('Musée d\'Art Moderne de la Ville de Paris', 'Paris', 'Avenue du Président Wilson', 'art', '10am-6pm', 7, 'mamvp.jpg'),
   new Museum('Muséum National d\'Histoire Naturelle', 'Paris', 'Rue Voltaire', 'natural history', '9am-5pm', 10, 'histoireNat.jpg'),
   new Museum('Musée d\'Orsay', 'Paris', 'Rue de la Légion d\'Honneur', 'art', '9:30am-6pm', 12, 'orsay.jpg'),
-  new Museum('Musée de l\'Orangerie', 'Paris', ' Jardin Tuileries', 'art', '9am-6pm', 9, 'orange.jpg')];
+  new Museum('Musée de l\'Orangerie', 'Paris', ' Jardin Tuileries', 'art', '9am-6pm', 9, 'orange.jpg'),
+  new Museum('Fondation Louis Vuitton', 'Paris', ' Avenue du Mahatma Gandhi', 'art', '10am-8pm', 5, 'flv.jpg')];
   /*emitter;*/
   constructor() {
     /*this.emitter = new EventEmitter<string>();
