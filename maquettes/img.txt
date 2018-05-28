@@ -20,3 +20,24 @@
   <br>
   -   
 </div>
+
+*
+
+
+
+constructor(private activatedRoute: ActivatedRoute,
+    private photoService: PhotoService) { }
+
+  ngOnInit() {
+    this.activatedRoute.params.subscribe(p => this.loadPhoto(p['id']));
+    // this.museum = this.museumService.getMuseumById(this.param);
+  }
+
+  loadPhoto(id: string) {
+    /*this.param = +id; /*convertir string en number avec + */
+  this.photo = this.photoService.getPhotosByIds([+id]);
+  console.log()
+  }
+
+
+(cameraBrand = '', focal = '', apeture = '', shutterSpeed = '', isoCam?, star?

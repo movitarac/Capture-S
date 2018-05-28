@@ -1,0 +1,10 @@
+constructor(nameP = '', cameraBrand = '', focal = '', apeture = '', shutterSpeed = '', flash = '', isoCam?, star?) {
+        this.id = Photo.count++;
+        this.nameP = nameP;
+        this.cameraBrand = cameraBrand;
+        this.focal = focal;
+        this.apeture = apeture;
+        this.isoCam = isoCam;
+        this.shutterSpeed = shutterSpeed;
+        this.star = star;
+    }*/

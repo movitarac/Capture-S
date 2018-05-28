@@ -50,7 +50,7 @@ export class MuseumComponent implements OnInit {
     }
     return null;*/
     /*0 correspond au 1er element m => lamda*/
-    /* filter attend une fonction apres chevron c'est la condition, avant chevron c'est le param*/
+    /* filter attend une fonction, apres chevron c'est la condition, avant chevron c'est le param*/
     return this.museums.filter(m => m.id === id)[0];
   }
 

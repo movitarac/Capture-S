@@ -17,15 +17,35 @@
         </li>
       </ul>
       <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Museum,Place...">
+        <input class="form-control mr-sm-2" [(ngModel)]="wordsToSearch" name="search" placeholder="Museum,Place..." 
+        (keydown)="searchMuseum()">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Explore</button>
       </form>
+
+    
+      
     </div>
   </nav>
 </header>
 
-<h1 class="capture">1..2..3..Capture!!</h1>
-<p class="explainHeader">
-    !Capture-S! photos of your favorite museums and historical monuments, 
-    then share them with the world by giving your camera specs and writing a review. Enjoy! 
-</p>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <span class="searchPart" *ngFor="let m of resultList"><a class="searchLink"[routerLink]="['/museum', m.id]">{{m.name}} </a></span>
+        <h1 class="capture">1..2..3..Capture!!</h1>
+      <p class="lead">!Capture-S! photos of your favorite museums and historical monuments, 
+          then share them with the world by giving your camera specs and writing a review. Enjoy!.</p>
+    </div>
+
+  </main>
+      
+
+   <!--<div class="explainHeader">
+          <h1 class="capture">1..2..3..Capture!!</h1>
+          <span class="searchPart" *ngFor="let m of resultList"><a [routerLink]="['/museum', m.id]">{{m.name}} </a></span>
+        !Capture-S! photos of your favorite museums and historical monuments, 
+        then share them with the world by giving your camera specs and writing a review. Enjoy!
+        </div>-->
+
+  

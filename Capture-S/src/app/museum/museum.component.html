@@ -15,7 +15,7 @@
 <ul id="listmuseums" *ngFor="let m of museums">
   <li (click)="onSelect(m)">{{m.name|uppercase}},{{m.city}}
     <button class="butEdit" (click)="editMuseum(m.id)">Edit</button>
-    <a [routerLink]="['/photo', m.id]" class="aList" >See more</a>
+    <a [routerLink]="['/museum', m.id]" class="aList" >See more</a>
   </li>
 </ul>
 <div class="details" *ngIf="selectedMuseum">

@@ -1,0 +1,32 @@
+<div class="photoDetail" *ngIf="photo"> 
+        <h3 class="museumName">{{photo.photoTitle}}</h3>
+    
+        <img class="photoMusee" [src]="'/assets/'+ photo.nameP ">
+         <br>
+    <div class="row rowphotodetail">
+        <div class="col-lg-4 star">
+                Star: {{photo.star}}
+        </div><!-- /.col-lg-4 -->
+              
+        <div class="col-lg-4">
+               <span class="reviewT"> Camera: </span>{{photo.cameraBrand}}
+                <br>
+                <span class="reviewT"> Focal distance:</span> {{photo.focal}}
+                <br>
+                <span class="reviewT">Aperture:</span> {{photo.apeture}}
+                <br>
+                <span class="reviewT"> Shutter speed:</span> {{photo.shutterSpeed}}
+                <br>
+                <span class="reviewT"> ISO:</span> {{photo.isoCam}}
+                <br>
+                <span class="reviewT"> Flash:</span> {{photo.flash}}
+        </div><!-- /.col-lg-4 -->
+              
+        <div class="col-lg-4">
+                <span class="reviewT"> Review:</span> <br>
+              +  {{photo.reviewPos}}
+              <br>
+             - {{photo.reviewNeg}}
+        </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+</div>

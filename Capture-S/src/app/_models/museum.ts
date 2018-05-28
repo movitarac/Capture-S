@@ -1,3 +1,5 @@
+import { Photo } from './photo';
+
 export class Museum {
     static count = 0;
     public id = 0;
@@ -7,9 +9,8 @@ export class Museum {
     public tarif: number;
     public address: string;
     public openHours: string;
-    public photo: string;
-    public star: number;
-    constructor(name = '', city = '', address = '', type = '', openHours = '', tarif = 0, photo?, star?) {
+    public photo: Array<Photo>;
+    constructor(name = '', city = '', address = '', type = '', openHours = '', tarif = 0, photo?) {
         this.id = Museum.count++;
         this.name = name;
         this.city = city;
@@ -18,6 +19,5 @@ export class Museum {
         this.address = address;
         this.tarif = tarif;
         this.photo = photo;
-        this.star = star;
     }
 }

@@ -1,0 +1,23 @@
+
+
+openstreetmap
+
+leaflet
+angular 2+ not angular js
+
+
+ <div class="container">
+      <div class="row">
+        <div class="col-6">
+            <div class="explainHeader">
+          <h1 class="capture">1..2..3..Capture!!</h1>
+       
+        !Capture-S! photos of your favorite museums and historical monuments, 
+        then share them with the world by giving your camera specs and writing a review. Enjoy!
+        </div>
+      </div>
+        <div class="col">
+          <span class="searchPart" *ngFor="let m of resultList"><a [routerLink]="['/museum', m.id]">{{m.name}} </a></span>
+        </div>
+      </div>
+  

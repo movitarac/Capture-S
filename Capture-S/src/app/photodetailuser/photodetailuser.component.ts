@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MuseumService } from '../_services/museum.service';
+import { PhotoService } from '../_services/photo.service';
 
 @Component({
-  selector: 'app-museum-photo',
-  templateUrl: './museum-photo.component.html',
-  styleUrls: ['./museum-photo.component.css']
+  selector: 'app-photodetailuser',
+  templateUrl: './photodetailuser.component.html',
+  styleUrls: ['./photodetailuser.component.css']
 })
-export class MuseumPhotoComponent implements OnInit {
-  /*photo = new Photo('Lots of collections', 'long queue', 'Nikon', 10);*/
+export class PhotodetailuserComponent implements OnInit {
   param: number;
-  museum;
+  photo;
   constructor(private activatedRoute: ActivatedRoute,
-    private museumService: MuseumService) { }
+    private photoService: PhotoService) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(p => this.loadPhoto(p['id']));
@@ -21,7 +21,9 @@ export class MuseumPhotoComponent implements OnInit {
 
   loadPhoto(id: string) {
     /*this.param = +id; /*convertir string en number avec + */
-  this.museum = this.museumService.getMuseumById(+id);
+  this.photo = this.photoService.getPhotoById(+id);
+
   }
+
 
 }

@@ -1,28 +1,14 @@
 <div class="details" *ngIf="museum">
     <h3 class="museumName">{{museum.name}}</h3>
     <br>
-    <img class="photoM" [src]="'/assets/'+museum.photo">
-    <br>
-     
-  <div class="container">
-     <div class="row">
-        <div class="col-sm">
-          Score
-        </div>
-        <div class="col-sm">
-            Type: {{museum.type}}
-            <br>
-           Address: {{museum.address}}
-            <br>
-            City: {{museum.city}}
-            <br>
-           Open Hours: {{museum.openHours}}
-            <br>
-            Tarif: {{museum.tarif}} (euros)
-        </div>
-        <div class="col-sm">
-        Review
+    <div class="row">
+        <div *ngFor="let mp of museum.photo">
+          <div class="col-md"><a [routerLink]="['/photo', mp.identification]" class="aList" >
+    <img class="photoM img-thumbnail"[src]="'/assets/'+ mp.nameP "></a>
+          </div>
         </div>
     </div>
-  </div>
+    
+    <br>
+     
 </div>
