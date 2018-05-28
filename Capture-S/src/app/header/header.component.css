@@ -3,18 +3,25 @@
     font-size: 50px;
     color: #003300;
     font-style: italic;
+    font-weight: bold;
     text-align: center;
     margin-top:150px;
     margin-left: 20px;
     position: relative;
+    font-family: 'Amatic SC', cursive;
 }
 .explainHeader {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
     color: #003300;
     margin-left: 20px;
     margin-top:30px;
     text-align: left;
+}
+.cam{
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .row{
     margin-top: 150px; 
@@ -25,7 +32,8 @@
 .searchPart{
     margin-left: 800px;
     margin-top: 150px;
-    font-size: 15px; 
+    font-size: 15px;
+    
 }
 .lead{
     text-align: center;

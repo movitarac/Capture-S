@@ -1,7 +1,11 @@
 p {
     font-size: 15px;
-    color: #000066;
+    color: #004d00;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin-top: 50px;
+    position:relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
+

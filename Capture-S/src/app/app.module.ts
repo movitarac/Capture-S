@@ -13,12 +13,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { MuseumPhotoComponent } from './museum-photo/museum-photo.component';
 import { PhotodetailuserComponent } from './photodetailuser/photodetailuser.component';
 import { SearchComponent } from './search/search.component';
+import { ConnectionComponent } from './connection/connection.component';
 
 
 const appRoutes: Routes = [{ path: '', component: MuseumComponent }, { path: 'hello', component: HelloComponent },
 { path: 'museum/:id', component: MuseumPhotoComponent },
 { path: 'photo/:id', component: PhotodetailuserComponent },
-{ path: 'search', component: SearchComponent }];
+{ path: 'search', component: SearchComponent },
+{ path: 'connection', component: ConnectionComponent }];
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ const appRoutes: Routes = [{ path: '', component: MuseumComponent }, { path: 'he
     MuseumPhotoComponent,
     PhotodetailuserComponent,
     SearchComponent,
+    ConnectionComponent,
   ],
   imports: [RouterModule.forRoot(appRoutes),
     BrowserModule, FormsModule

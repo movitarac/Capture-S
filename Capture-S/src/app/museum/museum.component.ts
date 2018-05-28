@@ -18,6 +18,7 @@ export class MuseumComponent implements OnInit {
   museum = new Museum();
   museums;
   selectedMuseum: Museum;
+  selectM = false;
   /*private va rajouter dans la classe a un attribut qui peut etre atteint de partout..
   typescript va rajouter automatiquement comme un attribut en haut (museums, etc)*/
   constructor(private museumService: MuseumService) {
@@ -29,7 +30,13 @@ export class MuseumComponent implements OnInit {
     /*this.museumService.getEvent().subscribe(a => console.log(a));*/
   }
   onSelect(m: Museum): void {
-    this.selectedMuseum = m;
+    if (this.selectM === false ) {
+      this.selectedMuseum = m;
+      this.selectM = true;
+    } else {
+      this.selectedMuseum = null;
+      this.selectM = false;
+    }
   }
   addMuseum() {
     this.museums.push(this.museum);

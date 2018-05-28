@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
     this.museums = this.museumService.getMuseums();
   }
   searchMuseum() {
-    if (this.wordsToSearch == null) {
+     if (this.wordsToSearch === '') {
       this.resultList = null;
     } else {
       this.resultList = this.museums.filter(
