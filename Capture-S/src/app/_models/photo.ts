@@ -13,8 +13,9 @@ export class Photo {
     public museumId: number;
     public reviewPos: string;
     public reviewNeg: string;
+    public username: string;
     constructor(nameP = '', photoTitle = '', cameraBrand = '', focal = '',
-    apeture = '', shutterSpeed = '', flash = '', isoCam?, star?, reviewPos?, reviewNeg?) {
+    apeture = '', shutterSpeed = '', flash = '', isoCam?, star?, reviewPos?, reviewNeg?, username?) {
         this.identification = Photo.count++;
         this.nameP = nameP;
         this.photoTitle = photoTitle;
@@ -27,6 +28,7 @@ export class Photo {
         this.star = star;
         this.reviewPos = reviewPos;
         this.reviewNeg = reviewNeg;
+        this.username = username;
     }
     /*constructor(nameP = '') {
         this.nameP = nameP;

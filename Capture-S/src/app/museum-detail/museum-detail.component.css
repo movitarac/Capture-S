@@ -1,6 +1,14 @@
 .details{
     margin-left: 40px;
     margin-top: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Asap', sans-serif;
     color: #004d00;
+}
+.minfo{
+    font-family: 'Asap', sans-serif;
+    color: #009900;
+    font-style: italic;
+}
+.infodetail{
+    font-weight: bold;
 }
