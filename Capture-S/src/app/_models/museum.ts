@@ -10,7 +10,9 @@ export class Museum {
     public address: string;
     public openHours: string;
     public photo: Array<Photo>;
-    constructor(name = '', city = '', address = '', type = '', openHours = '', tarif = 0, photo?) {
+    public lat: number;
+    public longi: number;
+    constructor(name = '', city = '', address = '', type = '', openHours = '', tarif = 0, photo?, lat?, longi?) {
         this.id = Museum.count++;
         this.name = name;
         this.city = city;
@@ -19,5 +21,7 @@ export class Museum {
         this.address = address;
         this.tarif = tarif;
         this.photo = photo;
+        this.lat = lat;
+        this.longi = longi;
     }
 }

@@ -14,17 +14,18 @@ export class MuseumService {
   flv = [new Photo('flv.jpg'), new Photo('flv1.jpg')];
   louvre = [new Photo('louvre.jpg'), new Photo('louvre1.jpg')];
   */
-  museums = [new Museum('Musée du Louvre ', 'Paris', 'Rue de Rivoli', 'art', '9am-6pm', 15, this.photoService.getPhotosByIds([0, 1, 2, 3])),
+  museums = [new Museum('Musée du Louvre ', 'Paris', 'Rue de Rivoli', 'art', '9am-6pm', 15,
+  this.photoService.getPhotosByIds([0, 1, 2, 3]), 48.8606, 2.3376),
   new Museum('Musée d\'Art Moderne de la Ville de Paris', 'Paris', 'Avenue du Président Wilson', 'art',
-    '10am-6pm', 7, this.photoService.getPhotosByIds([4, 5, 6, 7])),
+    '10am-6pm', 7, this.photoService.getPhotosByIds([4, 5, 6, 7]), 48.8643, 2.2978),
   new Museum('Muséum National d\'Histoire Naturelle', 'Paris', 'Rue Voltaire', 'natural history',
-    '9am-5pm', 10, this.photoService.getPhotosByIds([8, 9, 10, 11])),
+    '9am-5pm', 10, this.photoService.getPhotosByIds([8, 9, 10, 11]), 48.8443, 2.3562),
   new Museum('Musée d\'Orsay', 'Paris', 'Rue de la Légion d\'Honneur', 'art',
-    '9:30am-6pm', 12, this.photoService.getPhotosByIds([12, 13, 14, 15])),
+    '9:30am-6pm', 12, this.photoService.getPhotosByIds([12, 13, 14, 15]), 48.8600, 2.3266),
   new Museum('Musée de l\'Orangerie', 'Paris', ' Jardin Tuileries', 'art',
-    '9am-6pm', 9, this.photoService.getPhotosByIds([16, 17, 18, 19])),
+    '9am-6pm', 9, this.photoService.getPhotosByIds([16, 17, 18, 19]), 48.8638, 2.3227),
   new Museum('Fondation Louis Vuitton', 'Paris', ' Avenue du Mahatma Gandhi', 'art',
-    '10am-8pm', 5, this.photoService.getPhotosByIds([20, 21, 22, 23]))];
+    '10am-8pm', 5, this.photoService.getPhotosByIds([20, 21, 22, 23]), 48.8766, 2.2634)];
   /*emitter;*/
   constructor(private photoService: PhotoService) {
     /*this.emitter = new EventEmitter<string>();

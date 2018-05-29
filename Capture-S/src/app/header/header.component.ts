@@ -25,4 +25,10 @@ export class HeaderComponent implements OnInit {
       );
     }
   }
+
+  exploreMuseum() {
+    if (this.wordsToSearch === '') {
+      this.resultList = null;
+    }
+  }
 }

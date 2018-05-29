@@ -1,0 +1,8 @@
+map;
+baseIcon = L.icon({
+this.addMarker(48.8606, 2.3376, 'Musée du Louvre');
+    this.addMarker(48.8600, 2.3266, 'Musée d\'Orsay');
+    this.addMarker(48.8643, 2.2978, 'Musée d\'Art Moderne de la Ville de Paris');
+    this.addMarker(48.8638, 2.3227, 'Musée de l\'Orangerie');
+    this.addMarker(48.8766, 2.2634, 'Fondation Louis Vuitton');
+bubblesort

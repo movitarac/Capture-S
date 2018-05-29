@@ -1,0 +1,12 @@
+#map {
+    height: 400px;
+    width: 100%
+}
+.butShowM{
+margin-left: 58px;
+margin-top: 10px;
+margin-bottom: 10px;
+background-color: #004d1a;
+color:#ffffff;
+border-radius: 8px;
+}

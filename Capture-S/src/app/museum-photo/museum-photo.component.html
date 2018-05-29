@@ -1,5 +1,6 @@
 <div class="details" *ngIf="museum">
     <h3 class="museumName">{{museum.name}}</h3>
+    <span class="locationM" [routerLink]="['/location']">Where it is?</span>
     <br>
     <div class="row">
         <div *ngFor="let mp of museum.photo">
