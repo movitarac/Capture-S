@@ -14,7 +14,7 @@ import { MuseumPhotoComponent } from './museum-photo/museum-photo.component';
 import { PhotodetailuserComponent } from './photodetailuser/photodetailuser.component';
 import { SearchComponent } from './search/search.component';
 import { ConnectionComponent } from './connection/connection.component';
-import { UploadComponent } from './upload/upload.component';
+import { FeedComponent } from './feed/feed.component';
 import { LocationComponent } from './location/location.component';
 
 
@@ -23,7 +23,7 @@ const appRoutes: Routes = [{ path: '', component: MuseumComponent }, { path: 'he
 { path: 'photo/:id', component: PhotodetailuserComponent },
 { path: 'search', component: SearchComponent },
 { path: 'connection', component: ConnectionComponent },
-{ path: 'feed', component: UploadComponent },
+{ path: 'feed', component: FeedComponent },
 { path: 'location', component: LocationComponent }];
 
 @NgModule({
@@ -38,7 +38,7 @@ const appRoutes: Routes = [{ path: '', component: MuseumComponent }, { path: 'he
     PhotodetailuserComponent,
     SearchComponent,
     ConnectionComponent,
-    UploadComponent,
+    FeedComponent,
     LocationComponent,
   ],
   imports: [RouterModule.forRoot(appRoutes),

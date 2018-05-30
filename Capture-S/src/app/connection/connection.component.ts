@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./connection.component.css']
 })
 export class ConnectionComponent implements OnInit {
-
+  passworduser: string;
+  emailaddress: string;
   constructor() { }
 
   ngOnInit() {
+    /*localStorage.setItem("user","vita");*/
   }
 
+  getAccount() {
+    localStorage.setItem('user', this.emailaddress);
+    localStorage.setItem('pass', this.passworduser);
+  }
 }
