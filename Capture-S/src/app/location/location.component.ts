@@ -17,7 +17,7 @@ export class LocationComponent implements OnInit {
   show = false;
   buttonShowHide = { 'name': 'Show' };
   baseIcon = L.icon({
-    iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/images/marker-icon.png'
+    iconUrl: 'assets/museum2.png'
   });
   constructor(private museumService: MuseumService, private router: Router) { }
   ngOnInit() {

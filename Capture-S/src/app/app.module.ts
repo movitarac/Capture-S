@@ -23,7 +23,7 @@ const appRoutes: Routes = [{ path: '', component: MuseumComponent }, { path: 'he
 { path: 'photo/:id', component: PhotodetailuserComponent },
 { path: 'search', component: SearchComponent },
 { path: 'connection', component: ConnectionComponent },
-{ path: 'upload', component: UploadComponent },
+{ path: 'feed', component: UploadComponent },
 { path: 'location', component: LocationComponent }];
 
 @NgModule({

@@ -4,6 +4,9 @@ div {
 }
 
 
+.col-6{
+max-width: 674.5px !important;
+}
 
 body {
   display: -ms-flexbox;
