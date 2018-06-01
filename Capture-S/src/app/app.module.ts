@@ -16,6 +16,7 @@ import { SearchComponent } from './search/search.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { FeedComponent } from './feed/feed.component';
 import { LocationComponent } from './location/location.component';
+import { AuthGuardService } from './_auth/auth-guard.service';
 
 
 const appRoutes: Routes = [{ path: '', component: MuseumComponent }, { path: 'hello', component: HelloComponent },
@@ -23,8 +24,9 @@ const appRoutes: Routes = [{ path: '', component: MuseumComponent }, { path: 'he
 { path: 'photo/:id', component: PhotodetailuserComponent },
 { path: 'search', component: SearchComponent },
 { path: 'connection', component: ConnectionComponent },
-{ path: 'feed', component: FeedComponent },
-{ path: 'location', component: LocationComponent }];
+{ path: 'location', component: LocationComponent },
+{ path: 'feed', component: FeedComponent, canActivate: [AuthGuardService] }]
+  ;
 
 @NgModule({
   declarations: [

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-connection',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ConnectionComponent implements OnInit {
   passworduser: string;
   emailaddress: string;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     /*localStorage.setItem("user","vita");*/
@@ -17,5 +18,6 @@ export class ConnectionComponent implements OnInit {
   getAccount() {
     localStorage.setItem('user', this.emailaddress);
     localStorage.setItem('pass', this.passworduser);
+    this.router.navigate(['/feed']);
   }
 }

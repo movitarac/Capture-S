@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
     this.museums = this.museumService.getMuseums();
   }
   searchMuseum() {
-     if (this.wordsToSearch === '') {
+    if (this.wordsToSearch === '') {
       this.resultList = null;
     } else {
       this.resultList = this.museums.filter(
@@ -30,5 +30,8 @@ export class HeaderComponent implements OnInit {
     if (this.wordsToSearch === '') {
       this.resultList = null;
     }
+  }
+  logOutUser() {
+    localStorage.clear();
   }
 }
