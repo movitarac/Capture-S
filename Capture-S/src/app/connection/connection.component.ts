@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-connection',
@@ -9,10 +10,23 @@ import { Router } from '@angular/router';
 export class ConnectionComponent implements OnInit {
   passworduser: string;
   emailaddress: string;
-  constructor(private router: Router) { }
+  /*liste = '';*/
+  data;
+  constructor(private router: Router, private userService: UserService) { }
 
+/*showReturn(r) {
+  /*on change objet à string
+  this.liste = JSON.stringify(r);
+  console.log(r);
+}*/
   ngOnInit() {
     /*localStorage.setItem("user","vita");*/
+
+this.userService.getUserById(1).subscribe(r => this.loadData(r));
+}
+loadData(r) {
+  /*on change objet à string*/
+  this.data = JSON.stringify(r);
   }
 
   getAccount() {

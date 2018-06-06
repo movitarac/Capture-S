@@ -2,6 +2,8 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { Museum } from '../_models';
 import { Photo } from '../_models/photo';
 import { PhotoService } from './photo.service';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +16,7 @@ export class MuseumService {
   flv = [new Photo('flv.jpg'), new Photo('flv1.jpg')];
   louvre = [new Photo('louvre.jpg'), new Photo('louvre1.jpg')];
   */
-  museums = [new Museum('Musée du Louvre ', 'Paris', 'Rue de Rivoli', 'art', '9am-6pm', 15,
+  /*s = [new Museum('Musée du Louvre ', 'Paris', 'Rue de Rivoli', 'art', '9am-6pm', 15,
   this.photoService.getPhotosByIds([0, 1, 2, 3]), 48.8606, 2.3376),
   new Museum('Musée d\'Art Moderne de la Ville de Paris', 'Paris', 'Avenue du Président Wilson', 'art',
     '10am-6pm', 7, this.photoService.getPhotosByIds([4, 5, 6, 7]), 48.8643, 2.2978),
@@ -27,27 +29,34 @@ export class MuseumService {
   new Museum('Fondation Louis Vuitton', 'Paris', ' Avenue du Mahatma Gandhi', 'art',
     '10am-8pm', 5, this.photoService.getPhotosByIds([20, 21, 22, 23]), 48.8766, 2.2634)];
   /*emitter;*/
-  constructor(private photoService: PhotoService) {
-    /*this.emitter = new EventEmitter<string>();
-    setInterval(() => this.emitter.next(Math.random()), 1000);*/
+  constructor(private photoService: PhotoService, private http: HttpClient) { }
+  /*this.emitter = new EventEmitter<string>();
+  setInterval(() => this.emitter.next(Math.random()), 1000);*/
+  /*  getMuseums() {
+      return this.museums;
+    }
+  */
+  private museumurl = 'http://localhost:8080/museum';
+  public getMuseums(): Observable<Museum[]> {
+    return this.http.get<Museum[]>(this.museumurl + 's');
+  }
+  getMuseumById(id: number): Observable<Photo[]> {
+    return this.http.get<Photo[]>(this.museumurl + '/' + id);
   }
 
-  getMuseums() {
-    return this.museums;
-  }
-
-  getMuseumById(id: number): Museum {
+  /*getMuseumById(id: number): Museum {
     console.log(id);
-    /*for (let i = 0; i < this.museums.length; i++) {
+    for (let i = 0; i < this.museums.length; i++) {
       if (this.museums[i].id === id) {
         return this.museums[i];
       }
     }
-    return null;*/
-    /*0 correspond au 1er element m => lamda*/
-    /* filter attend une fonction apres chevron c'est la condition, avant chevron c'est le param*/
+    //return null;
+    //0 correspond au 1er element m => lamda/
+    // filter attend une fonction apres chevron c'est la condition, avant chevron c'est le param/
     return this.museums.filter(m => m.id === id)[0];
-  }
+}*/
+
   editMuseum(id: number) {
     /*console.log(id);*/
     this.museum = this.getMuseumById(id);

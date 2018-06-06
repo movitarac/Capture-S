@@ -1,10 +1,12 @@
-<div class="details" *ngIf="museum">
-    <h3 class="museumName">{{museum.name}}</h3>
+<div class="details" *ngIf="photos">
+         
+    <h3 class="museumName"></h3>
     <span class="locationM" [routerLink]="['/location']">Where it is?</span>
+       
     <br>
     <div class="row">
-        <div *ngFor="let mp of museum.photo">
-          <div class="col-md"><a [routerLink]="['/photo', mp.identification]" class="aList" >
+            <div *ngFor="let mp of photos">
+          <div class="col-md"><a [routerLink]="['/photo', mp.idphoto]" class="aList" >
     <img class="photoM img-thumbnail"[src]="'/assets/'+ mp.nameP "></a>
           </div>
         </div>

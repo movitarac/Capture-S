@@ -16,6 +16,7 @@ export class PhotodetailuserComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(p => this.loadPhoto(p['id']));
+
     // this.museum = this.museumService.getMuseumById(this.param);
   }
 

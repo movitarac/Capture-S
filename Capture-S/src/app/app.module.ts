@@ -17,7 +17,8 @@ import { ConnectionComponent } from './connection/connection.component';
 import { FeedComponent } from './feed/feed.component';
 import { LocationComponent } from './location/location.component';
 import { AuthGuardService } from './_auth/auth-guard.service';
-
+import { WebComponent } from './web/web.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [{ path: '', component: MuseumComponent }, { path: 'hello', component: HelloComponent },
 { path: 'museum/:id', component: MuseumPhotoComponent },
@@ -42,9 +43,10 @@ const appRoutes: Routes = [{ path: '', component: MuseumComponent }, { path: 'he
     ConnectionComponent,
     FeedComponent,
     LocationComponent,
+    WebComponent,
   ],
   imports: [RouterModule.forRoot(appRoutes),
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

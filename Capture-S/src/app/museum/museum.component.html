@@ -1,35 +1,27 @@
 <div class="row">
-    <div class="col-sm-6">
-  
-  <ul id="listmuseums" *ngFor="let m of museums">
-    <li class="pointer" (click)="onSelect(m)">{{m.name|uppercase}},{{m.city}}
-      <button class="butEdit" (click)="editMuseum(m.id)">Edit</button>
-      <a [routerLink]="['/museum', m.id]" class="aList" >See more</a>
-    </li>
-  </ul>
-  
-  
+  <div class="col-sm-6">
+    <div *ngIf="museums">
+      <ul id="listmuseums" *ngFor="let m of museums">
+        <li class="pointer" (click)="onSelect(m)">{{m.name|uppercase}},{{m.city}}
+          <button class="butEdit" (click)="editMuseum(m.idmuseum)">Edit</button>
+          <a [routerLink]="['/museum', m.idmuseum]" class="aList">See more</a>
+        </li>
+      </ul>
+    </div>
   </div>
-    <div class="col-sm-6">
-  
-  <div class="details" *ngIf="selectedMuseum">
-  <app-museum-detail [museum]="selectedMuseum"></app-museum-detail>
+  <div class="col-sm-6">
+    <div class="details" *ngIf="selectedMuseum">
+      <app-museum-detail [museum]="selectedMuseum"></app-museum-detail>
+    </div>
   </div>
-  
-  
-  </div>
-  </div>
-  
-  <h3 id="titlExplore">Which museum?</h3>
-  <div class="add">
-    
-    <br>  Name
-    <input class="addName" [(ngModel)]="museum.name" />
-    <br> City
-    <input class="addCity" [(ngModel)]="museum.city" />
-    <br>
-    <button class="butAdd" (click)="addMuseum()" *ngIf="!edit">add Museum/Historical Monument</button>
-    <button class="butSubmit" (click)="editOver()" *ngIf="edit">Submit modification</button>
-    
-   
-  </div>
+</div>
+<h3 id="titlExplore">Which museum?</h3>
+<div class="add">
+  <br> Name
+  <input class="addName" [(ngModel)]="museum.name" />
+  <br> City
+  <input class="addCity" [(ngModel)]="museum.city" />
+  <br>
+  <button class="butAdd" (click)="addMuseum()" *ngIf="!edit">add Museum/Historical Monument</button>
+  <button class="butSubmit" (click)="editOver()" *ngIf="edit">Submit modification</button>
+</div>
