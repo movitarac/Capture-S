@@ -34,8 +34,8 @@ export class MuseumPhotoComponent implements OnInit {
   */
   loadPhoto(id: string) {
     /*this.param = +id; /*convertir string en number avec + */
-    this.museum = this.museumService.getMuseumById(+id);
-    this.museumService.getMuseumById(+id).subscribe(m => this.photos = m);
+    this.museum = this.museumService.getPhotosForMuseumById(+id);
+    this.museumService.getPhotosForMuseumById(+id).subscribe(m => this.photos = m);
   }
 
 }

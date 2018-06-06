@@ -14,7 +14,11 @@ export class HeaderComponent implements OnInit {
   constructor(private museumService: MuseumService) { }
 
   ngOnInit() {
-    this.museums = this.museumService.getMuseums();
+    this.museumService.getMuseums().subscribe(r => this.loadData(r));
+    /*this.museumService.getEvent().subscribe(a => console.log(a));*/
+  }
+  loadData(r: Museum[]) {
+    this.museums = r;
   }
   searchMuseum() {
     if (this.wordsToSearch === '') {

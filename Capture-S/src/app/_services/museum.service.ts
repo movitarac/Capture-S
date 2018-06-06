@@ -40,10 +40,12 @@ export class MuseumService {
   public getMuseums(): Observable<Museum[]> {
     return this.http.get<Museum[]>(this.museumurl + 's');
   }
-  getMuseumById(id: number): Observable<Photo[]> {
+  getPhotosForMuseumById(id: number): Observable<Photo[]> {
     return this.http.get<Photo[]>(this.museumurl + '/' + id);
   }
-
+getMuseumById(id: number): Observable<Museum> {
+  return this.http.get<Museum>(this.museumurl + '/s' + id);
+}
   /*getMuseumById(id: number): Museum {
     console.log(id);
     for (let i = 0; i < this.museums.length; i++) {
