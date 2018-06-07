@@ -21,7 +21,14 @@
   <input class="addName" [(ngModel)]="museum.name" />
   <br> City
   <input class="addCity" [(ngModel)]="museum.city" />
-  <br>
+  <br> Address
+  <input class="addAddress" [(ngModel)]="museum.type" />
+  <br> Type 
+  <input class="addType" [(ngModel)]="museum.addressm" />
+  <br>Open
+  <input class="addOpenHours" [(ngModel)]="museum.openHours" />
+  <br>Tarif
+  <input class="addTarif" [(ngModel)]="museum.tarif" />
   <button class="butAdd" (click)="addMuseum()" *ngIf="!edit">add Museum/Historical Monument</button>
   <button class="butSubmit" (click)="editOver()" *ngIf="edit">Submit modification</button>
 </div>

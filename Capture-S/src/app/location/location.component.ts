@@ -11,7 +11,7 @@ import { MuseumService } from '../_services/museum.service';
 export class LocationComponent implements OnInit {
   map;
   museum;
-  museums;
+  museums = [];
   markers = [];
   marker;
   show = false;
@@ -21,12 +21,17 @@ export class LocationComponent implements OnInit {
   });
   constructor(private museumService: MuseumService, private router: Router) { }
   ngOnInit() {
-    this.museums = this.museumService.getMuseums();
+    this.museumService.getMuseums().subscribe(r => this.loadData(r));
+
+    /*this.museums = this.museumService.getMuseums();*/
     this.map = L.map('map').setView([48.8566, 2.3522], 12);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
     /*this.marker = [this.addMarker(48.8584, 2.2945, 'Eiffel Tower')];*/
+  }
+  loadData(r: Museum[]) {
+    this.museums = r;
   }
   addMarker(lat, lng, popup, id) {
     return L.marker([lat, lng], { icon: this.baseIcon }).bindPopup(popup).addTo(this.map).on('click', () =>

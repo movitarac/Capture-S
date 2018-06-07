@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../_services/user.service';
+import { User } from '../_models/user';
 
 @Component({
   selector: 'app-connection',
@@ -11,7 +12,8 @@ export class ConnectionComponent implements OnInit {
   passworduser: string;
   emailaddress: string;
   /*liste = '';*/
-  data;
+  user;
+  users = [];
   constructor(private router: Router, private userService: UserService) { }
 
 /*showReturn(r) {
@@ -22,14 +24,15 @@ export class ConnectionComponent implements OnInit {
   ngOnInit() {
     /*localStorage.setItem("user","vita");*/
 
-this.userService.getUserById(1).subscribe(r => this.loadData(r));
+this.userService.getUsers().subscribe(r => this.loadData(r));
 }
-loadData(r) {
-  /*on change objet à string*/
-  this.data = JSON.stringify(r);
-  }
+loadData(r: User[]) {
+  this.users = r;
+}
 
-  getAccount() {
+
+  getAccount(id: number) {
+
     localStorage.setItem('user', this.emailaddress);
     localStorage.setItem('pass', this.passworduser);
     this.router.navigate(['/feed']);

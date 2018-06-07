@@ -15,19 +15,21 @@ export class MuseumPhotoComponent implements OnInit {
   param: number;
   museums;
   museum;
-  photos = [];
+  photo;
+  photos;
   constructor(private activatedRoute: ActivatedRoute,
     private museumService: MuseumService, private photoService: PhotoService) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(p => this.loadPhoto(p['id']));
-    /*this.photoService.getPhotos().subscribe(r => this.loadPhotos(r));*/
     // this.museum = this.museumService.getMuseumById(this.param);
   }
-  /*
+/*
   loadPhotos(r: Photo[]) {
     this.photos = r;
+    this.photo = this.photos[1];
   }
+
   loadMuseums(m: Museum []) {
     this.museums = m;
   }
@@ -35,6 +37,7 @@ export class MuseumPhotoComponent implements OnInit {
   loadPhoto(id: string) {
     /*this.param = +id; /*convertir string en number avec + */
     this.museum = this.museumService.getPhotosForMuseumById(+id);
+    /*this.photoService.getPhotos().subscribe(r => this.loadPhotos(r));*/
     this.museumService.getPhotosForMuseumById(+id).subscribe(m => this.photos = m);
   }
 

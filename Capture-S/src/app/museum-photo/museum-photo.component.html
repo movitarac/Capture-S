@@ -1,6 +1,7 @@
 <div class="details" *ngIf="photos">
-         
-    <h3 class="museumName">{{photos[1].museum.name}}</h3>
+  
+    <h3 class="museumName">{{photos[1]?.photoTitle}}</h3>
+
     <span class="locationM" [routerLink]="['/location']">Where it is?</span>
        
     <br>

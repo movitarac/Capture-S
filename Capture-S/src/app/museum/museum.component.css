@@ -5,7 +5,7 @@
     border-style: groove;
     border-radius: 8px;
     width: 350px;
-    height: 200px;
+    height: 315px;
     border-color: #009900; 
 }
 
@@ -13,11 +13,33 @@
     margin-left: 25px;
     margin-top: 10px;
 }
+.addType {
+    margin-top: 10px;
+    margin-left: 32px;
+}
 .addCity {
     margin-left: 40px;
     margin-top: 10px;
 }
+.addName {
+    margin-left: 25px;
+    margin-top: 10px;
+}
 
+.addAddress {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.addOpenHours {
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.addTarif{
+    margin-top: 10px;
+    margin-left: 32px;
+}
 .butAdd,.butSubmit {
     
     margin-left: 58px;

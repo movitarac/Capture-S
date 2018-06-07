@@ -23,7 +23,7 @@ export class PhotodetailuserComponent implements OnInit {
 
   loadPhoto(id: string) {
     /*this.param = +id; /*convertir string en number avec + */
-  this.photo = this.photoService.getPhotoById(+id);
+  /*this.photo = this.photoService.getPhotoById(+id);*/
   this.photoService.getPhotoById(+id).subscribe(m => this.photo = m);
   }
 
