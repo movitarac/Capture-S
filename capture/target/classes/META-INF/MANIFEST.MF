@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: capture
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Activ'Consult'ing
+Implementation-Vendor-Id: com.racic
+Build-Jdk: 1.8.0_161
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/capture
+Created-By: Maven Integration for Eclipse
+
